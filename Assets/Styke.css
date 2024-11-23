@@ -727,10 +727,10 @@ section .jelajahi-nama {
 
 /* Daftarkan Motormu */
 .daftar-motor {
-  width: 106vw;
-  position: relative;
+    position: relative;
+    width: 119vw;
   padding: 0;
-  margin-left: -2.25rem;
+  left: -3rem;
   background-color: #003366;
 }
 .daftar-motor1 {
