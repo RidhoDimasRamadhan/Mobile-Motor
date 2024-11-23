@@ -11,52 +11,955 @@
       crossorigin="anonymous"
     />
     <script
+      src="https://kit.fontawesome.com/08692cf6f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <link rel="stylesheet" href="./Assets/Styke.css" />
+  <!-- Tambahkan link ini di <head> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
   </head>
   <body>
-    <h1>Ridho Dimas Ramadhan</h1>
-    <div
-      class="container justify-content-center text-center border border-primary"
-    >
-      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-      <div class="row border border-primary">
-        <div class="col-md-8 border border-right-primary">.col-md-8</div>
-        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-bottom">
+      <div class="container-fluid d-flex justify-content-around">
+        <!-- Home -->
+        <a href="#home" class="nav-link active">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <!-- Products -->
+        <a href="#products" class="nav-link">
+          <i class="fa-solid fa-box"></i>
+          <span>Produk</span>
+        </a>
+        <!-- Services -->
+        <a href="#services" class="nav-link">
+          <i class="fa-solid fa-tools"></i>
+          <span>Jasa Servis</span>
+        </a>
+        <!-- Transactions -->
+        <a href="#transactions" class="nav-link">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Transaksi</span>
+        </a>
+      </div>
+    </nav>
+    <!-- end Navbar -->
+
+    <div class="container header"></div>
+
+<!-- Header -->
+<section class="header-cashback">
+  
+  <div class="container header-section">
+<div class="row">
+  <div class="col-7 location">
+    <i class="fa-solid fa-location-dot "></i>
+    <p>Jl. Dr. KRT Radjiman Widyodiningrat Jl. Swadaya ..</p>
+  </div>
+  <div class="col-2 bar">
+    <i class="fa-solid fa-cart-shopping"></i>
+  </div>
+  <div class="col-2 bar">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+</div>
+  </div>
+
+  <div id="cashbackCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="./Assets/img/cb.png" class="d-block w-100" alt="Cashback 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="./Assets/img/cb2.png" class="d-block w-100" alt="Cashback 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="./Assets/img/cb3.png" class="d-block w-100" alt="Cashback 3">
+      </div>
+    </div>
+    <!-- Carousel controls -->
+ <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cashbackCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#cashbackCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#cashbackCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- end Header -->
+
+
+<!-- search -->
+<div class="container">
+  <div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" class="search-input"placeholder="Cari di TokoMotor">
+
+  </div>
+</div>
+<!-- end search -->
+
+
+<!-- Voucher -->
+<div class="container">
+<div class="membership">
+  <div class="tm-info-item">
+    <i class="fa-solid fa-coins"></i>
+    <div>
+      <p class="tm-info-title">TM Coin</p>
+      <p class="tm-info-value">1.000.000</p>
+    </div>
+  </div>
+  <div class="tm-info-item">
+    <i class="fa-solid fa-ticket"></i>
+    <div>
+      <p class="tm-info-title">Voucher TM</p>
+      <p class="tm-info-value">5 voucher</p>
+    </div>
+  </div>
+  <div class="tm-info-item">
+    <i class="fa-solid fa-id-card"></i>
+    <div>
+      <p class="tm-info-title">Membership</p>
+      <p class="tm-info-value">Platinum</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end Voucher -->
+
+<!-- Nikmati Layanan -->
+<section class="header-services">
+  <div class="container mt-5 position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+      <h5>Nikmati layanan yang disediakan TokoMotor</h5>
+    </div>
+    <div class="container">
+      <!-- Scrollable carousel -->
+      <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex">
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-wrench service-icon"></i>
+              </div>
+                <p>Pembelian Sparepart</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-tools service-icon"></i>
+              </div>
+                <p>Jasa Servis</p>
+              </div>
+              <div class="service-item">
+
+                <div class="services-circle">
+                <i class="fa-solid fa-motorcycle service-icon"></i>
+              </div>
+                <p>Rental Motor</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-helmet-safety service-icon"></i>
+              </div>
+                <p>Test Ride</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-box service-icon"></i>
+              </div>
+                <p>Produk Terbaru</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="d-flex">
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-motorcycle service-icon"></i>
+              </div>
+                <p>Beli Motor</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-cogs service-icon"></i>
+              </div>
+                <p>Servis Motor</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                  <i class="fa-solid fa-wrench service-icon"></i>
+                </div>
+                <p>Pemasangan Aksesoris</p>
+              </div>
+              
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-cogs service-icon"></i>
+              </div>
+                <p>Perawatan Berkala</p>
+              </div>
+
+              <div class="service-item">
+                <div class="services-circle">
+                <i class="fa-solid fa-shield-alt service-icon"></i>
+              </div>
+                <p>Asuransi Motor</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls (Optional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Carousel Indicators (Dots) -->
+        <div class="carousel-indicators-new">
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end Nikmati Layanan -->
+
+
+
+<!-- Pencarian -->
+ <div class="container mt-5 position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Berdasarkan Pencarianmu</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p>Lihat Semua</p></button>
+    </div>
+    <p class="text-secondary" style="font-size: .8rem;">
+      Lihat lagi produk yang menarik perhatianmu!
+    </p>
+    <div class="scroll-container" >
+      <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+      
+      <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
       </div>
 
-      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-      <div class="row border border-primary">
-        <div class="col-6 col-md-4 border border-right-primary">
-          .col-6 .col-md-4
+          <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
         </div>
-        <div class="col-6 col-md-4 border border-right-primary">
-          .col-6 .col-md-4
-        </div>
-        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
       </div>
 
-      <!-- Columns are always 50% wide, on mobile and desktop -->
-      <div class="row border border-primary">
-        <div class="col-6 border border-right-primary">.col-6</div>
-        <div class="col-6">.col-6</div>
+ <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+  </div>
+<!-- end Pencarian -->
+
+
+<!-- Flash Sale -->
+<section class="flash-sale">
+  <div class="container">
+ <div class="container mt-5 position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Flash Sale!</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p class="text-white">Lihat Semua</p></button>
+    </div>
+    <div class="berakhir">
+      <p class="text-white" style="font-size: .8rem;">
+        Berakhir dalam
+      </p>
+       <div class="clock-tgm clock-flash">
+            <i class="fa-solid fa-clock"></i>
+            <p> 24 : 00 : 00</p>
+          </div>
+      <div class="div">
+
+      </div>
+    </div>
+    <div class="scroll-container" >
+      <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+          <div style="color: black;">
+             <div class="line">
+              <div class="line-in"></div>
+             </div>
+            <span class="">Segera <b>Habis!</b> </span>
+          </div>
+      </div>
+      
+      <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+           <div style="color: black;">
+             <div class="line2">
+              <div class="line-in2"></div>
+             </div>
+            <span class="">Stock <b>Terbatas!</b> </span>
+          </div>
+      </div>
+
+          <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+           <div style="color: black;">
+             <div class="line2">
+              <div class="line-in2"></div>
+             </div>
+            <span class="">Stock <b>Terbatas!</b> </span>
+          </div>
+      </div>
+
+ <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+           <div style="color: black;">
+             <div class="line">
+              <div class="line-in"></div>
+             </div>
+            <span class="">Segera <b>Habis!</b> </span>
+          </div>
+      </div>
+
+  </div>
+  </div>
+</section>
+<!-- end Flash Sale -->
+
+
+
+<!-- Populer Di toko Motor -->
+    <div class="container mt-4 position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Populer di TokoMotor</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p>Lihat Semua</p></button>
+    </div>
+    <p class="text-secondary" style="font-size: .8rem;">
+      Temukan Sparepart yang paling diminati !
+    </p>
+ <div class="container">
+    <div class="tab-menu">
+      <a href="#" class="tab-item active">Power</a>
+      <a href="#" class="tab-item">Maintenance</a>
+      <a href="#" class="tab-item">Handling</a>
+      <a href="#" class="tab-item">Style</a>
+    </div>
+  </div>
+    <div class="scroll-container" id="scrollContainer">
+      <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+      
+      <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+          <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+ <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+  </div>
+<!-- end Populer Di toko Motor -->
+
+
+
+    <!-- Cocok untuk Motormu -->
+    <div class="container mt-4 position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Cocok untuk motormu</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p>Lihat Semua</p></button>
+    </div>
+    <p class="text-secondary" style="font-size: .8rem;">
+      Rekomendasi sparepart untuk motormu !
+    </p>
+    <div class="scroll-container" >
+      <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+      
+      <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+          <div class="product-card">
+   <div class="discount-badge">70%</div>
+        <img
+          src="./Assets/img/f72fd0ccef9f0c524f6cd786fbcafec8.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+ <div class="product-card">
+        <img
+          src="/Assets/img/988f2360-7b06-454f-b723-0c7ff3b74614.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <p style="font-size: .7rem; color: gray; margin: .5rem 0 0 0;">Brake System</p>
+          <p class="mb-1">TDR Racing Bracket</p>
+        </div>
+          <div style="text-align: left;">
+          <span class="price-old">Rp205.000</span><br>
+            <span class="price">Rp200.000</span>
+          </div>
+      </div>
+
+  </div>
+    <!-- end Cocok untuk Motormu -->
+
+
+<!-- TM Garage Terdekat -->
+<!-- <div class="container garage-container">
+    <h5 class="mb-3">TM Garage Terdekat</h5>
+    <div class="garage-cards" id="garageCards">
+      <div class="garage-card">
+        <img src="garage1.jpg" alt="TM Garage 1">
+        <h6>TM Garage Kebayoran</h6>
+        <p> 07:00 - 17:00</p>
+        <button class="btn">Booking Servis</button>
+      </div>
+      <div class="garage-card">
+        <img src="garage2.jpg" alt="TM Garage 2">
+        <h6>TM Garage Thamrin</h6>
+        <p> 07:00 - 17:00</p>
+        <button class="btn">Booking Servis</button>
+      </div>
+      <div class="garage-card">
+        <img src="garage3.jpg" alt="TM Garage 3">
+        <h6>TM Garage Sudirman</h6>
+        <p> 07:00 - 17:00</p>
+        <button class="btn">Booking Servis</button>
+      </div>
+    </div>
+    <div class="dots-container" id="dotsContainer">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div> -->
+
+
+  <div class="container garage-container ">
+     <div class="d-flex justify-content-between align-items-center">
+      <h4>TM Garage terdekat</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p>Lihat Semua</p></button>
+    </div>
+    <p class="text-secondary" style="font-size: .8rem;">
+      Bengkel terdekat? kami tunjukan disini!
+    </p>
+
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+            <div class="swiper-slide garage-card">
+        <img src="./Assets/img/tdr_technology_center_workshop1.jpg.webp" alt="TM Garage 2">
+        <div class="explain-tgm">
+          <h6>TM Garage Thamrin</h6>
+          <div class="clock-tgm">
+            <i class="fa-solid fa-clock"></i>
+            <p> 07:00 - 17:00</p>
+          </div>
+          <p style="color: gray; font-size: small;">Jl. Dr. KRT Radjiman Widyodiningrat Jl. Swadaya IV No.9, Rw. Terate, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13920</p>
+          <div class="booking">
+            <button class="btn">Booking Servis</button>
+            <div class="booking-icon">
+              <i class="fa-solid fa-broom-ball"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide garage-card">
+        <img src="./Assets/img/tdr_technology_center_workshop1.jpg.webp" alt="TM Garage 2">
+        <div class="explain-tgm">
+          <h6>TM Garage Thamrin</h6>
+          <div class="clock-tgm">
+            <i class="fa-solid fa-clock"></i>
+            <p> 07:00 - 17:00</p>
+          </div>
+          <p style="color: gray; font-size: small;">Jl. Dr. KRT Radjiman Widyodiningrat Jl. Swadaya IV No.9, Rw. Terate, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13920</p>
+          <div class="booking">
+            <button class="btn">Booking Servis</button>
+            <div class="booking-icon">
+              <i class="fa-solid fa-broom-ball"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+           <div class="swiper-slide garage-card">
+        <img src="./Assets/img/tdr_technology_center_workshop1.jpg.webp" alt="TM Garage 2">
+        <div class="explain-tgm">
+          <h6>TM Garage Thamrin</h6>
+          <div class="clock-tgm">
+            <i class="fa-solid fa-clock"></i>
+            <p> 07:00 - 17:00</p>
+          </div>
+          <p style="color: gray; font-size: small;">Jl. Dr. KRT Radjiman Widyodiningrat Jl. Swadaya IV No.9, Rw. Terate, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13920</p>
+          <div class="booking">
+            <button class="btn">Booking Servis</button>
+            <div class="booking-icon">
+              <i class="fa-solid fa-broom-ball"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Pagination Dots -->
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- end TM Garage Terdekat -->
+
+
+<!-- Jelajahi Motor -->
+<section class="jelajahi-motor">
+  <div class="container">
+    <h3>Jelajahi motor favoritmu</h3>
+    <div class="row mt-4">
+      <div class="col-6">
+        <div class="category-card bg-danger">
+          <img src="./Assets/img/pcx.png" alt="Internal Combustion Engine" />
+        </div>
+        <div class="jelajahi-nama bg-danger">
+          <p>Internal Combustion Engine</p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="category-card bg-primary">
+          <img src="./Assets/img/pcx.png" alt="Electrical Vehicle" />
+        </div>
+        <div class="jelajahi-nama bg-primary">
+          <p>Electrical Vehicle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- end Jelajahi Motor -->
+
+
+
+  <!-- Motor Pilihan -->
+  <div class="container mt-5 position-relative" style="padding: 0;">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Motor pilihan untukmu</h4>
+      <button class="btn btn-link" id="lihatSemuaBtn"><p>Lihat Semua</p></button>
+    </div>
+    <p class="text-secondary" style="font-size: .7rem;">
+      Bukan hanya sparepart, kami jual motor juga lho!
+    </p>
+
+    <!-- Scrollable Product List -->
+    <div class="scroll-container" id="scrollContainer">
+      <div class="product-card">
+        <div class="discount-badge-new">Baru</div>
+        <img
+          src="./Assets/img/nmax-155_ratio-16x9.jpg"
+          alt="Yamaha N-MAX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <h6>Yamaha</h6>
+          <p class="mb-1">N-MAX</p>
+        </div>
+        <br>
+          <div>
+            <span class="price">Rp24.000.000</span>
+          </div>
+      </div>
+
+      <div class="product-card">
+        <div class="discount-badge">70%</div>
+        <img
+          src="/Assets/img/pcx.png"
+          alt="Honda PCX 160"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+        <div class="text-left">
+          <h6>Honda</h6>
+          <p class="mb-1">PCX 160</p>
+        </div>
+        <div>
+          <span class="price-old">Rp65.000.000</span>
+          <br>
+          <span class="price">Rp50.000.000</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="discount-badge">50%</div>
+        <img
+          src="/Assets/img/pcx.png"
+          alt="Honda PCX 160"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+<div class="text-left">
+          <h6>Honda</h6>
+          <p class="mb-1">PCX 160</p>
+        </div>
+        <div>
+          <span class="price-old mt-1">Rp65.000.000</span>
+          <br>
+          <span class="price">Rp50.000.000</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="discount-badge-new">Baru</div>
+        <img
+          src="./Assets/img/nmax-155_ratio-16x9.jpg"
+          alt="Kawasaki KLX"
+          style="max-width: 100%; height: 150px; object-fit: cover;"
+        />
+       <div class="text-left">
+          <h6>Yamaha</h6>
+          <p class="mb-1">N-MAX</p>
+        </div>
+        <br>
+        <div>
+          <span class="price">Rp55.000.000</span>
+        </div>
+      </div>
+      <!-- Tambahkan lebih banyak produk di sini -->
+    </div>
+
+  </div>
+  <!-- end Motor Pilihan -->
+
+
+
+   <!-- Daftarkan Motor -->
+   <div class="mt-5 text-left p-4 text-white daftar-motor">
+    <div class="text-daftar-motor">
+
+      <h5 class="daftar-motor1">Daftarkan Motormu di Aplikasi TokoMotor!</h5>
+      <p class="daftar-motor2">
+        Dapatkan rekomendasi sparepart khusus dan booking service lebih mudah,
+        hanya dengan mendaftarkan motormu di TokoMotor App.
+      </p>
+    </div>
+
+    <div class="btn-daftar btn-container text-center">
+      <button class="btn btn-success ">Daftar Sekarang</button>
+      <button class="btn btn-light ">Daftar Nanti</button>
+    </div>
+</div>
+   <!-- end Daftarkan Motor -->
+
+<!-- Jelajahi Produk Motor -->
+<div class="container jelajahi">
+  <h3 class="mb-4">Jelajahi Produk TokoMotor</h3>
+  <div class="row gy-1">
+    <!-- Card 1 -->
+    <div class="col-6 col-md-4 col-lg-3 justify-content-around">
+        <div class="product-card-jelajahi">
+          <div class="product-image">
+            <img src="./Assets/img/brakes.jpeg" alt="Product Image 1" />
+          </div>
+          <h6 class="text-secondary left-1 title-produk">Brake System</h6>
+          <p class="mb-1 left-1 explain-product">TDR Racing Brake Shoe For Mio / Jupiter MX / RXK</p>
+          <div class="left-1">
+            <span class="price">Rp200.000</span>
+            <span class="price-old left-1">Rp205.000</span>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate the cards as needed -->
+      <!-- Card 2 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-jelajahi">
+          <div class="product-image">
+            <img src="./Assets/img/brakes.jpeg" alt="Product Image 2" />
+          </div>
+          <h6 class="text-secondary left-1 title-produk ">Brake System</h6>
+          <p class="mb-1 left-1 explain-product">TDR Racing Brake Shoe For Mio / Jupiter MX / RXK</p>
+          <div class="left-1">
+            <span class="price">Rp200.000</span>
+            <span class="price-old left-1">Rp205.000</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card with Discount -->
+      <div class="col-6 col-md-4 col-lg-3 position-relative ">
+        <div class="product-card-jelajahi">
+          <div class="discount">70%</div>
+          <div class="product-image">
+            <img src="/Assets/img/pcx.png" alt="Motor PCX 160" />
+          </div>
+          <h6 class="text-secondary left-1 title-produk ">Honda</h6>
+          <p class="mb-1 left-1 explain-product">PCX 160</p>
+          <div class="left-1">
+            <span class="price">Rp50.000.000</span>
+            <span class="price-old left-1">Rp65.000.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 position-relative">
+        <div class="product-card-jelajahi">
+          <div class="discount">70%</div>
+          <div class="product-image">
+            <img src="/Assets/img/pcx.png" alt="Motor PCX 160" />
+          </div>
+          <h6 class="text-secondary left-1 title-produk">Honda</h6>
+          <p class="mb-1 left-1 explain-product">PCX 160</p>
+          <div class="left-1">
+            <span class="price">Rp50.000.000</span>
+            <span class="price-old ">Rp65.000.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 position-relative">
+        <div class="product-card-jelajahi">
+          <div class="discount">70%</div>
+          <div class="product-image">
+            <img src="/Assets/img/pcx.png" alt="Motor PCX 160" />
+          </div>
+          <h6 class="text-secondary left-1 title-produk">Honda</h6>
+          <p class="mb-1 left-1 explain-product">PCX 160</p>
+          <div class="left-1">
+            <span class="price">Rp50.000.000</span>
+            <span class="price-old left-1">Rp65.000.000</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <br />
-    <br />
-
-    <div 
-      class="container justify-content-center text-center border border-warning"
-    >
-      <div class="row">
-        <div class="col-md-4">1</div>
-        <div class="col-sm-4">2</div>
-        <div class="col-lg-4">3</div>
-      </div>
-    </div>
+  </div>
+  <!-- Jelajahi Produk Motor -->
+    <!-- <script src="index.js"></script> -->
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+    <script
+    src="https://kit.fontawesome.com/08692cf6f2.js"
+    crossorigin="anonymous"
+    ></script>
+    <script src="/Assets/index.js"></script>
   </body>
 </html>
