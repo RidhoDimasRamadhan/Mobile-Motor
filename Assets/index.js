@@ -1,23 +1,12 @@
 // Swiper Initialization
-const swiper = new Swiper(".swiper-container", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  },
-});
-
+  });
 // Lihat Semua Button
 document.getElementById("lihatSemuaBtn").addEventListener("click", () => {
   alert("Menampilkan semua motor yang tersedia!");
@@ -81,3 +70,4 @@ garageCards.addEventListener("scroll", () => {
   //     scrollContainer.scrollTo({ left: targetScrollLeft, behavior: "smooth" });
   //   });
   // });
+

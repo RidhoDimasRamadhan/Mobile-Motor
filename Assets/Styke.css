@@ -8,10 +8,13 @@
   --dark-gray: #6b7280;
   --off-white: #f3f4f6;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-HTML, body {
+HTML,
+body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -97,19 +100,19 @@ HTML, body {
   margin-top: 1rem;
 }
 .bar {
-  padding: 0.8rem;
+  padding: 0.4rem;
   border-radius: 50%;
   background-color: white;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0.2rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
   position: relative;
-  top: -0.5rem;
+  top: -0.3rem;
 }
 .location {
   width: 70%;
@@ -138,7 +141,7 @@ HTML, body {
 
 .header-cashback {
   background-color: #f9f9f9;
-  padding: 10px 0;
+  padding: 0 0 10px 0;
 }
 
 .carousel-inner img {
@@ -343,7 +346,6 @@ HTML, body {
   transform: scale(1.2); /* Perbesar dots aktif */
 }
 .craosel-nikmati {
-  margin-top: rem;
   position: relative;
 }
 
@@ -352,7 +354,7 @@ HTML, body {
 /* Flash Shale */
 .flash-sale {
   background-color: rgb(186, 4, 4);
-  width: 100%; 
+  width: 100%;
   position: relative;
   padding: 0;
   padding-bottom: 1rem;
@@ -591,14 +593,21 @@ section.flash-sale .container #lihatSemuaBtn {
 }
 
 /* Custom Pagination */
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background: #dddddd00;
-  border-radius: 50%;
+  background-color: gray;
+  border-radius: 100%;
   transition: all 0.3s ease;
-  position: relative;
-  top: 2rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -606,14 +615,15 @@ section.flash-sale .container #lihatSemuaBtn {
   height: 10px;
   background-color: #001f4d;
   border: 2px solid #001f4d;
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }
+
 /* end TM Garage Terdekat */
 
 /* Jelajahi Motor  */
 .jelajahi-motor {
   background-color: #f39c12;
-  max-width:100vw ;
+  max-width: 100vw;
   position: relative;
   padding: 0;
   padding-bottom: 1rem;
@@ -736,15 +746,14 @@ section .jelajahi-nama {
 
 /* Daftarkan Motormu */
 .daftar-motor {
-    
-    width: 100%;
-    background-color: #003366;
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
+  width: 100%;
+  background-color: #003366;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .daftar-motor1 {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bolder;
 }
 .daftar-motor2 {
@@ -753,19 +762,17 @@ section .jelajahi-nama {
   font-weight: 0;
 }
 
-.btn-daftar{
-    display: flex;
+.btn-daftar {
+  display: flex;
 }
 .btn-daftar button {
   border-radius: 25px;
-  font-size: 0.7rem;
-  width: 15rem;
+  font-size: 0.6rem;
+  width: 20rem;
   padding: 0.5rem 2rem;
   margin: 0 0.3rem;
 }
 /* end Daftarkan Motormu */
-
-
 
 /* prdoduk Motor */
 .product-card-jelajahi {
@@ -776,7 +783,6 @@ section .jelajahi-nama {
   justify-content: space-around;
   position: relative;
   padding: 15px;
-  width: 11.7rem;
   background-color: #fff;
 }
 
