@@ -8,14 +8,17 @@
   --dark-gray: #6b7280;
   --off-white: #f3f4f6;
 }
-
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+HTML, body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--primary-color);
   color: black;
+  width: 100%;
 }
 
 /* navbar */
@@ -267,7 +270,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   scroll-snap-type: x mandatory; /* Smooth scroll snapping */
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-item {
@@ -280,7 +283,7 @@ body {
   width: 20%; /* Change width to show how many items per slide */
   margin-right: -1px;
   text-align: center;
-  padding:20px;
+  padding: 20px;
   /* border-radius: 10px; */
 }
 .service-item i {
@@ -293,14 +296,14 @@ body {
 .service-item p {
   text-align: center;
   font-size: 0.6rem;
-  margin-top: .4rem;
-  margin-left: .4rem;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.services-circle  {
+.services-circle {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -308,11 +311,10 @@ body {
   border-radius: 100%;
   background-color: #b4b4b42c;
   /* border: 1px solid black; */
-  padding: .2rem 1.2rem;
-
+  padding: 0.2rem 1.2rem;
 }
-.services-circle i{
-    margin-top: .4rem;
+.services-circle i {
+  margin-top: 0.4rem;
 }
 
 .carousel-indicators-new {
@@ -335,23 +337,22 @@ body {
 }
 
 .craosel-nikmati .active {
-    background-color: #007bff; /* Warna dots aktif */
-    width: 30px;
-    height: 8px;
+  background-color: #007bff; /* Warna dots aktif */
+  width: 30px;
+  height: 8px;
   transform: scale(1.2); /* Perbesar dots aktif */
 }
-.craosel-nikmati{
-    margin-top: rem;
-    position: relative;
+.craosel-nikmati {
+  margin-top: rem;
+  position: relative;
 }
-
 
 /* end Nikmati Layanan */
 
 /* Flash Shale */
-section.flash-sale {
+.flash-sale {
   background-color: rgb(186, 4, 4);
-  width: 100vw;
+  width: 100vw; 
   position: relative;
   padding: 0;
   padding-bottom: 1rem;
@@ -601,12 +602,11 @@ section.flash-sale .container #lihatSemuaBtn {
 /* end TM Garage Terdekat */
 
 /* Jelajahi Motor  */
-section.jelajahi-motor {
+.jelajahi-motor {
   background-color: #f39c12;
-  width: 106vw;
+  max-width:100vw ;
   position: relative;
   padding: 0;
-  margin-left: -2.25rem;
   padding-bottom: 1rem;
 }
 .jelajahi-motor h3 {
