@@ -352,7 +352,7 @@ HTML, body {
 /* Flash Shale */
 .flash-sale {
   background-color: rgb(186, 4, 4);
-  width: 100vw; 
+  width: 100%; 
   position: relative;
   padding: 0;
   padding-bottom: 1rem;
