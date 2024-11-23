@@ -421,9 +421,9 @@ section.flash-sale .container #lihatSemuaBtn {
 /* Populer di toko */
 .tab-menu {
   display: flex;
-  gap: 20px;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 10px;
+  justify-content: center;
 }
 
 .tab-item {
@@ -443,7 +443,16 @@ section.flash-sale .container #lihatSemuaBtn {
 .tab-item.active {
   color: #007bff;
 }
-
+.tab-item::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgba(128, 128, 128, 0.365);
+  border-radius: 2px;
+}
 .tab-item.active::after,
 .tab-item:hover::after {
   content: "";
@@ -727,35 +736,36 @@ section .jelajahi-nama {
 
 /* Daftarkan Motormu */
 .daftar-motor {
+    
+    width: 100%;
+    background-color: #003366;
     position: relative;
-    width: 119vw;
-  padding: 0;
-  left: -3rem;
-  background-color: #003366;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .daftar-motor1 {
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: bolder;
 }
 .daftar-motor2 {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   color: #ddd;
   font-weight: 0;
-  margin-left: 1.5rem;
 }
-.text-daftar-motor h5 {
-  margin-left: 1.5rem;
-}
-.text-daftar-motor {
-  margin-left: -2rem;
+
+.btn-daftar{
+    display: flex;
 }
 .btn-daftar button {
   border-radius: 25px;
   font-size: 0.7rem;
-  padding: 0.5rem 2.9rem;
+  width: 15rem;
+  padding: 0.5rem 2rem;
   margin: 0 0.3rem;
 }
 /* end Daftarkan Motormu */
+
+
 
 /* prdoduk Motor */
 .product-card-jelajahi {
@@ -766,9 +776,8 @@ section .jelajahi-nama {
   justify-content: space-around;
   position: relative;
   padding: 15px;
-  width: 10.3rem;
+  width: 11.7rem;
   background-color: #fff;
-  margin-left: -0.7rem;
 }
 
 .discount {
