@@ -154,7 +154,7 @@ body {
   background-color: rgb(205, 198, 198);
   margin: 0 5px;
   transition: all 0.3s ease-out;
-  top: -.5rem;
+  top: -0.5rem;
 }
 
 .carousel-indicators .active {
@@ -166,8 +166,6 @@ body {
 }
 /* end Header */
 
-
-
 /* search */
 .search {
   position: relative;
@@ -177,7 +175,7 @@ body {
 
 .search i {
   position: absolute;
-  left: 15px; 
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: gray;
@@ -207,14 +205,12 @@ body {
 }
 /* end search */
 
-
-
 /* Voucher */
 .membership {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #001C56; /* Warna biru tua */
+  background-color: #001c56; /* Warna biru tua */
   border-radius: 10px;
   padding: 15px 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -232,7 +228,7 @@ body {
 }
 
 .tm-info-item:last-child {
-  border-right: none /* Hilangkan garis di elemen terakhir */
+  border-right: none; /* Hilangkan garis di elemen terakhir */
 }
 
 .tm-info-item i {
@@ -242,7 +238,7 @@ body {
 .tm-info-title {
   margin: 0;
   font-size: 0.9rem;
-  color: #A5B5D3; /* Warna abu-abu teks kecil */
+  color: #a5b5d3; /* Warna abu-abu teks kecil */
 }
 
 .tm-info-value {
@@ -251,8 +247,8 @@ body {
   font-weight: bold;
   color: white;
 }
-.tm-info-item p{
-    font-size: .7rem;
+.tm-info-item p {
+  font-size: 0.7rem;
 }
 
 /* end Voucher */
@@ -262,16 +258,16 @@ body {
   background-color: #f9f9f9;
   margin: -1rem 0 -1rem 0;
 }
-.header-services h5{
-font-size: 1.1rem;
-font-weight: bolder;
+.header-services h5 {
+  font-size: 1.1rem;
+  font-weight: bolder;
 }
 .carousel-inner {
   overflow-x: auto; /* Allows horizontal scrolling */
   display: flex;
   flex-wrap: nowrap;
   scroll-snap-type: x mandatory; /* Smooth scroll snapping */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch; 
 }
 
 .carousel-item {
@@ -281,37 +277,42 @@ font-weight: bolder;
 }
 
 .service-item {
-  flex: 0 0 auto;
   width: 20%; /* Change width to show how many items per slide */
-  margin-right: 15px;
+  margin-right: -1px;
   text-align: center;
-  padding: 20px;
-  border-radius: 10px;
+  padding:20px;
+  /* border-radius: 10px; */
 }
-.service-item i{
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-       display: flex;
-    justify-content: center;
-    align-items: center;
+.service-item i {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.service-item p{
-    text-align: center;
-    font-size: .7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.service-item p {
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: .4rem;
+  margin-left: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.services-circle{
-    padding: .6rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: 1px solid black;
-    background-color: #b4b4b486;
+.services-circle  {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #b4b4b42c;
+  /* border: 1px solid black; */
+  padding: .2rem 1.2rem;
+
+}
+.services-circle i{
+    margin-top: .4rem;
 }
 
 .carousel-indicators-new {
@@ -322,34 +323,37 @@ font-weight: bolder;
   text-align: center;
 }
 
-.carousel-indicators-new button {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
+.craosel-nikmati button {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px; /* Jarak antar dots */
   border-radius: 50%;
-  background-color: black;
+  background-color: #ccc; /* Warna default dots */
   border: none;
-  transition: all 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-.carousel-indicators-new .active {
-  background-color: #007bff;
+.craosel-nikmati .active {
+    background-color: #007bff; /* Warna dots aktif */
+    width: 30px;
+    height: 8px;
+  transform: scale(1.2); /* Perbesar dots aktif */
+}
+.craosel-nikmati{
+    margin-top: rem;
+    position: relative;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  display: none; /* Optionally hide the carousel controls */
-}
 
 /* end Nikmati Layanan */
 
 /* Flash Shale */
 section.flash-sale {
   background-color: rgb(186, 4, 4);
-  width: 107vw;
+  width: 100vw;
   position: relative;
   padding: 0;
-  margin-left: -0.92rem;
   padding-bottom: 1rem;
   color: white;
   margin-top: 2rem;
